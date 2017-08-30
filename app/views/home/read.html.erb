@@ -1,0 +1,12 @@
+<div class="container" style="margin-top:50px">
+    <a href="/home/index" >글 작성하러 가기</a>
+    <% @info.each do |i| %>
+    <div class="well">
+        <p>제목 : <%= i.title %></p>
+        <p>내용 : <%= i.content %></p>
+        <p>사진<img src="<%= i.pic %>"></p><br>
+    <a href="/home/update/<%= i.id %>">글 수정하기</a><br>
+    <a href="/home/delete/<%= i.id %>">글 삭제하기</a><hr>
+        </div>
+    <% end %>
+</div>
